@@ -1,5 +1,8 @@
 // 18 jan 2022
 
+#ifndef PHYSICS_HPP
+#define PHYSICS_HPP
+
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
@@ -111,3 +114,5 @@ glm::dvec3 ph_gravitacc(glm::dvec3 v, glm::dvec3 av, double am)
 {
 	return ph_exclength(v, av, am) ? glm::dvec3(0.0, 0.0, 0.0) : dist * (am / (temp_r_fn_exclength * temp_r_fn_exclength * temp_r_fn_exclength));
 }
+
+#endif
