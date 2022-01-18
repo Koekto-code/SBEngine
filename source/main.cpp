@@ -20,7 +20,7 @@
 #include <vector>
 
 //#include <sph.hpp>
-#include "physics.h"
+#include "physics.hpp"
 #include "misc.hpp"
 
 //#include "gltext.cpp"
