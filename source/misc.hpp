@@ -1,7 +1,7 @@
 // 14 jan 2022
 
-#ifndef MISC_H
-#define MISC_H
+#ifndef MISC_HPP
+#define MISC_HPP
 
 #include <cstdio>
 #include <glm/gtc/type_ptr.hpp>
