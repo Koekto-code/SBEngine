@@ -1,4 +1,4 @@
-CTest 0.2.2
+CTest 0.2.2 alpha
 
 Controls:
 	WASD Space Shift - accelerate the camera
