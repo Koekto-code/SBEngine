@@ -13,13 +13,14 @@ Controls:
 	B - debug information
 
 	ESC - free cursor
-	LMB - hold cursor; push the sphere
-	RMB - pull the sphere to camera
+	LMB - hold cursor; accelerate the sphere in the cameraForward vector direction (radius 8 m)
+	RMB - accelerate the sphere in the direction to camera (radius 8 m.)
   MMB (press) - reset render distance
 	MMB (rotating) - change FOV
 
 
 Quantity of small spheres is limited by 65535.
+Djanibekov effect is noticeable on the rotated tetrahedron.
 
 Compiled in MSVS 2017.
 Libraries used:
