@@ -6,8 +6,9 @@ Controls:
 	E/Q - precision of physics (main.cpp: tdiv variable)
 	U/H - hardness of spheres (main.cpp: kf variable)
 	T/G - viscosity (main.cpp: visc variable)
+	!! Recommended to up viscosity to 0.5-0.7 to see the difference between simple spheres and tetrahedron. !!
 	M/N - multiply/divide main sphere mass by 1.1 
-	O/P - add/remove a sphere
+	O/P - add/remove a sphere (to/from end of "sph" vector)
 	R - reset the scene (8 spheres and cube)
 	B - debug information
 
