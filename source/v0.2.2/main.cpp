@@ -639,12 +639,14 @@ void strut(uint16_t s, uint16_t p, float dist, double* delta)
 
 void doStruts(double &time)
 {
+	/* Make the tetraheron */
 	strut(0, 1, 15.f, &time);
 	strut(1, 2, 15.0, &time);
 	strut(0, 2, 21.2132034355964f, &time);
 	strut(1, 3, 15.f, &time);
 	strut(2, 3, 21.2132034355964f, &time);
 	strut(0, 3, 21.2132034355964f, &time);
+	/* */
 
 	//strut(4, 5, 10.0, &time);
 
