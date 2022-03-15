@@ -25,6 +25,7 @@ Djanibekov effect is noticeable on the rotated tetrahedron.
 Compiles well with MSVS and GCC both.
 Libraries used:
 GLFW 3.3.4 (https://glfw.org https://github.com/glfw/glfw)
+	with GLAD 2.0 (https://gen.glad.sh)
 GLM 0.9.9.8 (https://github.com/g-truc/glm)
 stb (https://github.com/nothings/stb)
 
