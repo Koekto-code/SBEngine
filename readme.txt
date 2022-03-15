@@ -15,17 +15,17 @@ Controls:
 	ESC - free cursor
 	LMB - hold cursor; accelerate the sphere in the cameraForward vector direction (radius 8 m)
 	RMB - accelerate the sphere in the direction to camera (radius 8 m.)
-  MMB (press) - reset render distance
+  	MMB (press) - reset render distance
 	MMB (rotating) - change FOV
 
 
 Quantity of small spheres is limited by 65535.
 Djanibekov effect is noticeable on the rotated tetrahedron.
 
-Compiled in MSVS 2017.
+Compiles well with MSVS and GCC both.
 Libraries used:
-GLFW 3.3.4 (https://glfw.org)
+GLFW 3.3.4 (https://glfw.org https://github.com/glfw/glfw)
 GLM 0.9.9.8 (https://github.com/g-truc/glm)
 stb (https://github.com/nothings/stb)
 
-18 jan 2022
+15 mar 2022
