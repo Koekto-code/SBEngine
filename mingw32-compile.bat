@@ -11,5 +11,5 @@ cd source
 "mingw32-g++" cube.c -o"objects/cube.o" -c -O2 -I"D:\Libs\glm-master"
 pause
 cd objects
-"mingw32-g++" gl.o physics.o object.o camera.o shader.o main.o sph.o sphs.o cube.o app.res -s -o "../../Release/ctest.exe" -lglfw3dll -lgdi32 -L"D:\Libs\glfw-3.3.4\mingw32\src" -Wl,-subsystem,windows
+"mingw32-g++" gl.o physics.o object.o camera.o shader.o main.o sph.o sphs.o cube.o app.res -s -o "../../Release/ctest.exe" -lglfw3dll -L"D:\Libs\glfw-3.3.4\mingw32\src" -Wl,-subsystem,windows
 pause
