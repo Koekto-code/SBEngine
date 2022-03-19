@@ -137,7 +137,7 @@ int main(int argc, char** argv)
 	
 	camera.fInput |= camera.VIEW_CHANGE;
 
-	cube.set_mass(5.f, std::begin(massPts), sizeof(massPts) / sizeof(glm::vec3));
+	cube.set_mass(5.f /*, std::begin(massPts), sizeof(massPts) / sizeof(glm::vec3) */);
 	cube.set_surface(std::begin(cubeVerts), sizeof(cubeVerts) / sizeof(float));
 	cube.coords = glm::dvec3(140.0, 0.0, 0.0);
 
