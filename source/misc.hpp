@@ -1,19 +1,28 @@
-// 14 jan 2022
+// 19 mar 2022
 
 #ifndef MISC_HPP
 #define MISC_HPP
 
-#include <cstdio>
 #include <glm/gtc/type_ptr.hpp>
 
-void displayVector(glm::dvec3 v)
+static float max(float x, float y)
 {
-	printf("dvec3(%9.6f, %9.6f, %9.6f)\n", v.x, v.y, v.z);
+	return x > y ? x : y;
 }
 
-void displayVector(glm::vec3 v)
+static double max(double x, double y)
 {
-	printf("vec3(%9.6f, %9.6f, %9.6f)\n", v.x, v.y, v.z);
+	return x > y ? x : y;
+}
+
+static void writeVector(std::ofstream& file, glm::dvec3 v)
+{
+	file << "dvec3(" << v.x << ", " << v.y << ", " << v.z << ")\n";
+}
+
+static void writeVector(std::ofstream& file, glm::vec3 v)
+{
+	file << "vec3(" << v.x << ", " << v.y << ", " << v.z << ")\n";
 }
 
 #endif
