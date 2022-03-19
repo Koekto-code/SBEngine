@@ -554,7 +554,7 @@ namespace graphics
 	}
 	static void initSkybox()
 	{
-		#include "skybox.c"
+		#include "skybox.h"
 		glGenVertexArrays(1, &skyboxVAO);
 		glGenBuffers(1, &skyboxVBO);
 		glGenBuffers(1, &skyboxEBO);
