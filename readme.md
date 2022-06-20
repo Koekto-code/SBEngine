@@ -6,8 +6,8 @@ This is mainly the implementation of basic physics engine.
 Now program allows to load model from Wavefront OBJ file and see its falling/orbiting/rotating.
 
 #Compiling
-```
 Now project supports compiling only with MinGW (tested on MinGW 9.2.0).
+```
 Libraries used:
 	GLFW 3.3.7 https://github.com/glfw/glfw
 	Assimp 5.2 https://github.com/assimp/assimp
