@@ -16,11 +16,10 @@ Libraries used:
 	STB https://github.com/nothings/stb
 ```
 #Launching
-```
 Program waits 2 seconds from launch to reduce the chance of object to crash and fall apart.
 If this happened, try launching the program without heavy CPU loads (except that of course)
 or with -t 0.1 flag.
-
+```
 view [options]...
 Options:
   -m <file>  		Load the model from <file>.
@@ -36,7 +35,7 @@ Options:
 ```
 WASD/Space/Shift - accelerate camera
 
-Change values: (without Alt- higher, lower otherwise)
+Change variables: (without Alt- higher, lower otherwise)
 	H: hardness (global)
 	G: viscosity (global)
 	M: planet mass
