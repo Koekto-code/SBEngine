@@ -17,7 +17,7 @@ Libraries used:
 # Launching
 Program waits 2 seconds from launch to reduce the chance of object to crash and fall apart.
 If this happened, try launching the program without heavy CPU loads (except that of course)
-or with -t 0.1 flag.
+or with -t 0.01 flag.
 ```
 view [options]...
 Options:
