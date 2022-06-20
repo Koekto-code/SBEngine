@@ -1,11 +1,10 @@
 # Strut-based engine v0.4.0-alpha
 21 june, 2022
-
-#About
+# About
 This is mainly the implementation of basic physics engine.
-Now program allows to load model from Wavefront OBJ file and see its falling/orbiting/rotating.
+Now program allows to load model from Wavefront OBJ file and see it falling/orbiting/rotating.
 
-#Compiling
+# Compiling
 Now project supports compiling only with MinGW (tested on MinGW 9.2.0).
 ```
 Libraries used:
@@ -15,7 +14,7 @@ Libraries used:
 	GLAD Loader 2.0.0 (for GL 3.3): https://gen.glad.sh/
 	STB https://github.com/nothings/stb
 ```
-#Launching
+# Launching
 Program waits 2 seconds from launch to reduce the chance of object to crash and fall apart.
 If this happened, try launching the program without heavy CPU loads (except that of course)
 or with -t 0.1 flag.
@@ -31,7 +30,7 @@ Options:
   --m2 <int>   		Set second marker to <int>-th vertex of model. Value is non-negative.
   --mass <float>	Specify initial planet mass. Recommended 2.5e+14.
 ```
-#Controls:
+# Controls:
 ```
 WASD/Space/Shift - accelerate camera
 
