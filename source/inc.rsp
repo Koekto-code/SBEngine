@@ -1,0 +1,2 @@
+ -I. -I"D:/Libs/glfw-3.3.7/include" -I"D:/Libs/stb" -I"D:/Libs/glm" -I"D:/Libs/glad/include" -I"D:/Libs/assimp/include"
+ 
