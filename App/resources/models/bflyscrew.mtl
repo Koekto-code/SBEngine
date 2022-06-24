@@ -1,0 +1,11 @@
+# Blender MTL File: 'Metal.001'
+# Material Count: 1
+
+newmtl Metal.001
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.327 0.33 0.341
+Ks 0.815 0.864 0.878
+d 1
+illum 2
+map_Kd ./Pipe004_1K_Color.jpg
