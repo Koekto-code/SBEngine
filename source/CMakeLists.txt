@@ -34,7 +34,7 @@ view_SOURCES
 	runtime/stb_image.c
 	runtime/print.cpp
 	runtime/world.cpp
-	models/sph.c
+	models/sph
 )
 set_source_files_properties(${view_SOURCES} PROPERTIES LANGUAGE CXX)
 
