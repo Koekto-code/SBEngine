@@ -9,6 +9,7 @@ Processing collisions between two custom bodies isn't implemented yet.
 Tested builds with MinGW 9.2.0 and MinGW-w64 8.1.0.
 
 # Dependencies
+! Some parts of original libraries may be deleted to reduce their size (such as .git folders, tests, cmake files, documentation...)
 ```
 	GLFW 3.x https://github.com/glfw/glfw
 	Assimp 5.2.2 https://github.com/assimp/assimp
@@ -16,7 +17,6 @@ Tested builds with MinGW 9.2.0 and MinGW-w64 8.1.0.
 	GLAD Loader 2.0.0 (for GL 3.3): https://gen.glad.sh/
 	STB https://github.com/nothings/stb
 All of them except Assimp are placed in ./source/deps/
-Some parts of original libraries may be deleted to reduce their size (such as .git folders, tests, cmake files, documentation...)
 ```
 # Launching
 ```
