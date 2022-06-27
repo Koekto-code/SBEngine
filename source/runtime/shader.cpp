@@ -1,4 +1,4 @@
-// 24 june 2022
+// 27 june 2022
 // SB Engine v0.1.0-alpha
 
 #include <runtime/shader.hpp>
@@ -93,15 +93,15 @@ void Shader::compile(const char* vertexPath, const char* fragmentPath, const cha
 		checkCompileErrors(s_geometry, ShaderError::Geometry);
 	}
 	
-	program_id = glCreateProgram();
-	glAttachShader(program_id, s_vertex);
-	glAttachShader(program_id, s_fragment);
+	programId = glCreateProgram();
+	glAttachShader(programId, s_vertex);
+	glAttachShader(programId, s_fragment);
 	
 	if (geometryPath != nullptr)
-		glAttachShader(program_id, s_geometry);
+		glAttachShader(programId, s_geometry);
 	
-	glLinkProgram(program_id);
-	checkCompileErrors(program_id, ShaderError::Program);
+	glLinkProgram(programId);
+	checkCompileErrors(programId, ShaderError::Program);
 	
 	/* Flag shaders for deletion. They will not be deleted
 		until they are detached from program. */
@@ -116,47 +116,47 @@ void Shader::terminate()
 {
 	GLuint current;
 	glGetIntegerv(GL_CURRENT_PROGRAM, (GLint*)&current);
-	if (program_id == current)
+	if (programId == current)
 		glUseProgram(0);
 	
 	// Detach all shaders and terminate program
-	glDeleteProgram(program_id);
+	glDeleteProgram(programId);
 }
 
-void Shader::use() {
-	glUseProgram(program_id);
-}
+void Shader::use() { glUseProgram(programId); }
+
+GLint Shader::id() { return programId; }
 
 void Shader::setInt(const char* name, int value) {
-	glUniform1i(glGetUniformLocation(program_id, name), value);
+	glUniform1i(sh_getUniformLocation(name), value);
 }
 
 void Shader::setFloat(const char* name, float value) {
-	glUniform1f(glGetUniformLocation(program_id, name), value);
+	glUniform1f(sh_getUniformLocation(name), value);
 }
 
 void Shader::setVec2(const char* name, const glm::vec2& value) {
-	glUniform2fv(glGetUniformLocation(program_id, name), 1, &value[0]);
+	glUniform2fv(sh_getUniformLocation(name), 1, &value[0]);
 }
 
 void Shader::setVec3(const char* name, const glm::vec3& value) {
-	glUniform3fv(glGetUniformLocation(program_id, name), 1, &value[0]);
+	glUniform3fv(sh_getUniformLocation(name), 1, &value[0]);
 }
 
 void Shader::setVec4(const char* name, const glm::vec4& value) {
-	glUniform4fv(glGetUniformLocation(program_id, name), 1, &value[0]);
+	glUniform4fv(sh_getUniformLocation(name), 1, &value[0]);
 }
 
 void Shader::setMat2(const char* name, const glm::mat2& mat) {
-	glUniformMatrix2fv(glGetUniformLocation(program_id, name), 1, GL_FALSE, &mat[0][0]);
+	glUniformMatrix2fv(sh_getUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 }
 
 void Shader::setMat3(const char* name, const glm::mat3& mat) {
-	glUniformMatrix3fv(glGetUniformLocation(program_id, name), 1, GL_FALSE, &mat[0][0]);
+	glUniformMatrix3fv(sh_getUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 }
 
 void Shader::setMat4(const char* name, const glm::mat4& mat) {
-	glUniformMatrix4fv(glGetUniformLocation(program_id, name), 1, GL_FALSE, &mat[0][0]);
+	glUniformMatrix4fv(sh_getUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 }
 
 void Shader::checkCompileErrors(GLuint shader, ShaderError type)
@@ -202,4 +202,15 @@ void Shader::checkCompileErrors(GLuint shader, ShaderError type)
 			}
 		}
 	}
+}
+
+GLint Shader::sh_getUniformLocation(const GLchar* name)
+{
+	auto it = uniformLocations.find(name);
+	if (it != uniformLocations.end())
+		return it->second;
+	
+	GLint newLoc = glGetUniformLocation(programId, name);
+	uniformLocations.insert(std::pair<const char*, GLint>(name, newLoc));
+	return newLoc;
 }

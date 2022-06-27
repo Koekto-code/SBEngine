@@ -1,18 +1,14 @@
-// 24 june 2022
+// 27 june 2022
 // SB Engine v0.1.0-alpha
 
 #include <runtime/sbObject.hpp>
 #include <runtime/localMath.hpp>
+#include <runtime/world.hpp>
 
 #include <GLFW/glfw3.h>
 
 #include <cassert>
 #include <cmath>
-
-// world.cpp variables
-extern const double g_plRadius;
-extern double g_plMass;
-extern double g_tMul;
 
 // uvec2(5, 2) == uvec2(2, 5) if they are struts
 static bool uv2ceq(glm::uvec2 v0, glm::uvec2 v1)
@@ -231,7 +227,7 @@ void sbObject::updatePhysics(const double dT)
 		
 		diff = (offset * hard_k) * glm::normalize(diff);
 		
-		if ((dotv < 0.0) xor (offset < 0.0))
+		if ((dotv < 0.0) ^ (offset < 0.0))
 			diff *= (1.0 + visc_k);
 		
 		massPoints[p0].force += diff;

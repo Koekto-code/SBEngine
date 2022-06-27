@@ -1,4 +1,4 @@
-// 24 june 2022
+// 27 june 2022
 // The main planet OpenGL model
 // Generated with fsphgen https://github.com/Koekto-code/fsphgen
 
