@@ -9,7 +9,7 @@
 #include <cassert>
 #include <cmath>
 
-// main.cpp variables
+// world.cpp variables
 extern const double g_plRadius;
 extern double g_plMass;
 extern double g_tMul;
