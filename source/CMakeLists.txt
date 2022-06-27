@@ -1,6 +1,4 @@
-
-set(
-view_HEADERS
+set (view_HEADERS
 	common.hpp
 	app/argparser.hpp
 	app/callbacks.hpp
@@ -17,8 +15,7 @@ view_HEADERS
 	models/skybox.h
 	models/sph.h
 )
-set(
-view_SOURCES
+set (view_SOURCES
 	app/main.cpp
 	app/argparser.cpp
 	app/callbacks.cpp
@@ -52,4 +49,4 @@ endif()
 set(assimpLinkDirectory ${CMAKE_BINARY_DIR}/lib)
 
 target_link_directories(view PRIVATE  "${glfwLibDirectory}" "${EXTERNAL_ASSIMP_IMPORT_LIBRARY_DIR}")
-target_link_libraries(view PRIVATE "${VAR_GLFW_LIB_NAME}" -lassimp)
+target_link_libraries(view PRIVATE "${VAR_GLFW_LIB_NAME}" assimp)
